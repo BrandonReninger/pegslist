@@ -13,16 +13,15 @@ export default {
   data() {
     return {};
   },
-  computed: {},
   methods: {
     selectCar() {
       $store.commit("setActiveCar", {});
-      //NOTE route to cardetails here
+      //NOTE route to carDetails here
     }
-  },
-  components: {
-    //this is a base component so it doesn't have any other components
   }
+  //components: {
+  //this is a base component so it doesn't have any other components
+  //}
 };
 </script>
 

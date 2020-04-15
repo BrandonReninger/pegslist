@@ -9,6 +9,11 @@ const routes = [{
     path: '/',
     name: 'Home',
     component: Home
+  }, {
+    path: "/cars",
+    name: 'Cars',
+    // @ts-ignore
+    component: () => import( /*webpackChunkName: "cars"*/ '../pages/Cars.vue')
   },
   {
     path: '/about',

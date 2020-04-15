@@ -1,5 +1,9 @@
 <template>
-  <div class="cars col-12"></div>
+  <div class="cars col-12">
+    <div class="row">
+      <car v-for="car in cars" :carData="car" :key="car._id"></car>
+    </div>
+  </div>
 </template>
 
 
@@ -13,13 +17,12 @@ export default {
   computed: {
     cars() {
       return this.$store.state.cars;
-    }
-  },
-  methods: {
+    },
     created() {
       this.$store.dispatch(getCars);
     }
   },
+  //methods: {},
   components: {
     Car
   }
