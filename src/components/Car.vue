@@ -1,5 +1,8 @@
 <template>
-  <div class="car"></div>
+  <div class="car border col-3">
+    <p>{{carData.make}}</p>
+    <p>{{carData.model}}</p>
+  </div>
 </template>
 
 
@@ -11,8 +14,15 @@ export default {
     return {};
   },
   computed: {},
-  methods: {},
-  components: {}
+  methods: {
+    selectCar() {
+      $store.commit("setActiveCar", {});
+      //NOTE route to cardetails here
+    }
+  },
+  components: {
+    //this is a base component so it doesn't have any other components
+  }
 };
 </script>
 
